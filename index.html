@@ -1,54 +1,112 @@
 <!DOCTYPE html>
 <html>
-    
     <head>
-        <title>Icon Template Percentage</title>
-        <style>
-            .row{
-                margin-top:40px;
-            }
-            .left-column{
-                float:left;
-                width:30%;
-                margin-left:30px;
-            }
-            .center-column{
-                width:30%;
-                margin:auto;
-            }
-            .right-column{
-                float:right;
-                width:30%;
-                margin:auto;
-            }
-            .image-container{
-                display: table-cell;
-                vertical-align: middle;
-                margin: auto;
-            }
-        </style>
+    <title>My first website</title>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.1/buzz.min.js"></script>
+
+       <style>
+          .row{
+             width:720px;
+             margin: 10px auto 10px auto ;
+          }
+          .image-container {
+              display: table-cell;
+              vertical-align: middle;
+              padding:20px;
+          }
+       </style>
     </head>
 
     <body>
-
         <div class="row">
-            <div class="left-column"><div class="image-container"><img src="img/cir.png" height="200" width="200"/></div></div>
-            <div class="right-column"><div class="image-container"><img src="img/tri.png" height="200" width="200"/></div></div>
-            <div class="center-column"><div class="image-container"><img src="img/squ.png" height="200" width="200"/></div></div>
+            <div class="image-container">
+                <img id="SRF" src="img/SRF.png" height="200" width="200"
+                  onmouseover="this.src='img/SRF_ro.png';"
+                  onmouseout="this.src='img/SRF.png';"
+                />
+            </div>
+
+            <div class="image-container">
+                <img id="SF" src="img/SF.png" height="200" width="200"
+                  onmouseover="this.src='img/SF_ro.png';"
+                  onmouseout="this.src='img/SF.png';"
+                />
+            </div>
+
+            <div class="image-container">
+                <img id="SR" src="img/SR.png" height="200" width="200"
+                  onmouseover="this.src='img/SR_ro.png';" 
+                  onmouseout="this.src='img/SR.png';"
+                />
+            </div>
         </div>
 
         <div class="row">
-            <div class="left-column"><div class="image-container"><img src="img/hex.png" height="200" width="200"/></div></div>
-            <div class="right-column"><div class="image-container"><img src="img/rec.png" height="200" width="200"/></div></div>
-            <div class="center-column"><div class="image-container"><img src="img/sta.png" height="200" width="200"/></div></div>
+            <div class="image-container">
+                <img id="MWB" src="img/MWB.png" height="215" width="215"
+                  onmouseover="this.src='img/MWB_ro.png';"
+                  onmouseout="this.src='img/MWB.png';"
+                />
+            </div>
+
+            <div class="image-container">
+                <img id="S3A" src="img/S3A.png" height="200" width="200"
+                  onmouseover="this.src='img/S3A_ro.png';"
+                  onmouseout="this.src='img/S3A.png';"
+                />
+            </div>
+            
+            <div class="image-container">
+                <img id="SH" src="img/SH.png" height="200" width="200"
+                  onmouseover="this.src='img/SH_ro.png';"
+                  onmouseout="this.src='img/SH.png';"
+                />
+            </div>
         </div>
 
-        <div class="row">
-            <div class="left-column"><div class="image-container"><img src="img/trr.png" height="200" width="200"/></div></div>
-            <div class="right-column"><div class="image-container"><img src="img/sqr.png" height="200" width="200"/></div></div>
-            <div class="center-column"><div class="image-container"><img src="img/her.png" height="200" width="200"/></div></div>
+        <div class="row"> 
+
+             <div class="image-container">
+                  <img id="SBEAR" src="img/SBEAR.png" height="200" width="200"
+                     onmouseover="this.src='img/SBEAR_ro.png';"
+                     onmouseout="this.src='img/SBEAR.png';"
+                    />
+             </div>
+    
+            <div class="image-container">
+                  <img id="SBP" src="img/SBP.png" height="200" width="200"
+                     onmouseover="this.src='img/SBP_ro.png';"
+                     onmouseout="this.src='img/SBP.png';"
+                   />
+            </div>
+
+            <div class="image-container">
+                <img id="CB" src="img/CB.png" height="200" width="240"
+                 onmouseover="this.src='img/OB.png';"
+                 onmouseout="this.src='img/CB.png';"
+                />
+            </div>
+
         </div>
+
+        <script>
+             var magic1 = new buzz.sound("sound/magic1.mp3");
+             var magic2 = new buzz.sound("sound/magic2.mp3");
+             var magic3 = new buzz.sound("sound/magic3.mp3");
+             var fairytale = new buzz.sound("sound/fairytale.mp3");
+             var wink = new buzz.sound("sound/wink.mp3");
+             var snoring = new buzz.sound("sound/snoring.mp3");
+
+             window.onload = function() {
+                document.getElementById('CB').addEventListener('mouseover', function () {fairytale.play();});
+                document.getElementById('SBEAR').addEventListener('mouseover', function () {snoring.play();});
+             }
+        </script>
+
+        </body>
+         
+
 
     </body>
-    
 </html>
